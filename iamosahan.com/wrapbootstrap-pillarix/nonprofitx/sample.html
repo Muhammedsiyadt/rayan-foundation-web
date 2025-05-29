@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Rayan Foundation</title>
+  <style>
+    /* ===================== */
+    /* STUNNING CONTACT FORM */
+    /* ===================== */
+    .cntct-form {
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 6.5rem;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 15px 40px rgba(9, 168, 168, 0.15);
+      position: relative;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .cntct-form::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background: linear-gradient(90deg, 
+        rgb(255, 136, 0), 
+        rgb(9, 168, 168));
+    }
+
+    .cntct-form__header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .cntct-form__title {
+      font-size: 2.2rem;
+      color: rgb(9, 168, 168);
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+    }
+
+    .cntct-form__title::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: rgb(255, 136, 0);
+      border-radius: 2px;
+    }
+
+    .cntct-form__subtitle {
+      color: #666;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .cntct-form__grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .cntct-form__group {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+
+    .cntct-form__label {
+      display: block;
+      margin-bottom: 0.8rem;
+      color: #444;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .cntct-form__input,
+    .cntct-form__textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border: 2px solid #e0e0e0;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background-color: #f9f9f9;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .cntct-form__input:focus,
+    .cntct-form__textarea:focus {
+      outline: none;
+      border-color: rgb(9, 168, 168);
+      background-color: white;
+      box-shadow: 0 0 0 4px rgba(9, 168, 168, 0.1);
+    }
+
+    .cntct-form__textarea {
+      min-height: 160px;
+      resize: vertical;
+    }
+
+    .cntct-form__submit {
+      background: linear-gradient(135deg, 
+        rgb(255, 136, 0), 
+        rgb(9, 168, 168));
+      color: white;
+      border: none;
+      padding: 16px 32px;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 2rem auto 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 6px 20px rgba(255, 136, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cntct-form__submit:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(255, 136, 0, 0.4);
+    }
+
+    .cntct-form__submit::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255,255,255,0.2), 
+        transparent);
+      transition: 0.5s;
+    }
+
+    .cntct-form__submit:hover::before {
+      left: 100%;
+    }
+
+    /* Floating Label Effect */
+    .cntct-form__group--floating {
+      position: relative;
+      margin-top: 1.2rem;
+    }
+
+    .cntct-form__group--floating .cntct-form__input {
+      padding: 20px 18px 8px;
+    }
+
+    .cntct-form__group--floating .cntct-form__label {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      margin-bottom: 0;
+      color: #888;
+      font-size: 1rem;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    .cntct-form__group--floating .cntct-form__input:focus + .cntct-form__label,
+    .cntct-form__group--floating .cntct-form__input:not(:placeholder-shown) + .cntct-form__label {
+      top: 6px;
+      left: 18px;
+      font-size: 0.75rem;
+      color: rgb(9, 168, 168);
+    }
+
+    /* Error Styling */
+    .cntct-form__error {
+      color: #ff4757;
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+      display: none;
+    }
+
+    .cntct-form__group.has-error .cntct-form__input,
+    .cntct-form__group.has-error .cntct-form__textarea {
+      border-color: #ff4757;
+    }
+
+    .cntct-form__group.has-error .cntct-form__error {
+      display: block;
+    }
+
+    /* Success Message */
+    .cntct-form__success {
+      display: none;
+      text-align: center;
+      padding: 1.5rem;
+      background-color: rgba(46, 213, 115, 0.1);
+      border-radius: 10px;
+      margin-top: 1.5rem;
+      color: #2ed573;
+      border: 1px solid #2ed573;
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    /* Loading State */
+    .cntct-form__submit.loading {
+      color: transparent;
+      pointer-events: none;
+    }
+
+    .cntct-form__submit.loading::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 22px;
+      height: 22px;
+      border: 3px solid rgba(255,255,255,0.3);
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes spin {
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .cntct-form {
+        padding: 2rem 1.5rem;
+        margin: 3rem auto;
+      }
+      
+      .cntct-form__title {
+        font-size: 1.8rem;
+      }
+      
+      .cntct-form__submit {
+        max-width: 100%;
+        padding: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .cntct-form {
+        padding: 1.8rem 1.2rem;
+        border-radius: 12px;
+      }
+      
+      .cntct-form__title {
+        font-size: 1.5rem;
+      }
+      
+      .cntct-form__subtitle {
+        font-size: 1rem;
+      }
+      
+      .cntct-form__input,
+      .cntct-form__textarea {
+        padding: 12px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Stunning Contact Form Section -->
+  <section class="cntct-form">
+    <div class="cntct-form__header">
+      <h2 class="cntct-form__title">Contact Us</h2>
+      <p class="cntct-form__subtitle">Have questions about our Nutrition Addition Program? Reach out to us and we'll get back to you within 24 hours.</p>
+    </div>
+    
+    <form id="contactForm" class="cntct-form__grid">
+      <div class="cntct-form__group cntct-form__group--floating">
+        <input type="text" id="name" name="name" class="cntct-form__input" placeholder=" " required>
+        <label for="name" class="cntct-form__label">Full Name</label>
+        <div class="cntct-form__error" id="name-error">Please enter your name</div>
+      </div>
+      
+      <div class="cntct-form__group cntct-form__group--floating">
+        <input type="email" id="email" name="email" class="cntct-form__input" placeholder=" " required>
+        <label for="email" class="cntct-form__label">Email Address</label>
+        <div class="cntct-form__error" id="email-error">Please enter a valid email</div>
+      </div>
+      
+      <div class="cntct-form__group cntct-form__group--floating">
+        <input type="tel" id="phone" name="phone" class="cntct-form__input" placeholder=" ">
+        <label for="phone" class="cntct-form__label">Phone Number (Optional)</label>
+        <div class="cntct-form__error" id="phone-error">Please enter valid phone number</div>
+      </div>
+      
+      <div class="cntct-form__group cntct-form__group--floating">
+        <input type="text" id="subject" name="subject" class="cntct-form__input" placeholder=" " required>
+        <label for="subject" class="cntct-form__label">Subject</label>
+        <div class="cntct-form__error" id="subject-error">Please enter a subject</div>
+      </div>
+      
+      <div class="cntct-form__group" style="grid-column: 1 / -1">
+        <label for="message" class="cntct-form__label">Your Message</label>
+        <textarea id="message" name="message" class="cntct-form__textarea" required></textarea>
+        <div class="cntct-form__error" id="message-error">Please enter your message</div>
+      </div>
+      
+      <button type="submit" class="cntct-form__submit">
+        <span>Send Message</span>
+      </button>
+      
+      <div class="cntct-form__success" id="success-message">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+        Your message has been sent successfully! We'll contact you soon.
+      </div>
+    </form>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const contactForm = document.getElementById('contactForm');
+      const submitBtn = contactForm.querySelector('.cntct-form__submit');
+      const successMessage = document.getElementById('success-message');
+      
+      // Email validation
+      function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+      
+      // Phone validation (optional)
+      function isValidPhone(phone) {
+        return !phone || /^[0-9]{10,15}$/.test(phone);
+      }
+      
+      // Validate field
+      function validateField(field) {
+        const value = field.value.trim();
+        const errorElement = document.getElementById(`${field.id}-error`);
+        const formGroup = field.closest('.cntct-form__group');
+        
+        if (field.required && !value) {
+          formGroup.classList.add('has-error');
+          return false;
+        }
+        
+        if (field.type === 'email' && !isValidEmail(value)) {
+          formGroup.classList.add('has-error');
+          errorElement.textContent = 'Please enter a valid email address';
+          return false;
+        }
+        
+        if (field.type === 'tel' && !isValidPhone(value)) {
+          formGroup.classList.add('has-error');
+          errorElement.textContent = 'Please enter 10-15 digit phone number';
+          return false;
+        }
+        
+        formGroup.classList.remove('has-error');
+        return true;
+      }
+      
+      // Validate entire form
+      function validateForm() {
+        let isValid = true;
+        const fields = contactForm.querySelectorAll('input, textarea');
+        
+        fields.forEach(field => {
+          if (!validateField(field)) {
+            isValid = false;
+          }
+        });
+        
+        return isValid;
+      }
+      
+      // Form submission
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        if (validateForm()) {
+          // Show loading state
+          submitBtn.classList.add('loading');
+          
+          // Prepare form data
+          const formData = new FormData(contactForm);
+          const formObject = {};
+          formData.forEach((value, key) => formObject[key] = value);
+          
+          // In production, replace this with actual email sending code
+          setTimeout(() => {
+            console.log('Form would send to contactrayanfoundation@gmail.com:', formObject);
+            
+            // Show success
+            successMessage.style.display = 'block';
+            contactForm.reset();
+            
+            // Reset floating labels
+            document.querySelectorAll('.cntct-form__group--floating .cntct-form__label').forEach(label => {
+              label.style.top = '18px';
+              label.style.fontSize = '1rem';
+            });
+            
+            // Hide after 5 seconds
+            setTimeout(() => {
+              successMessage.style.display = 'none';
+            }, 5000);
+            
+            // Reset button
+            submitBtn.classList.remove('loading');
+          }, 1500);
+        }
+      });
+      
+      // Real-time validation
+      contactForm.querySelectorAll('input, textarea').forEach(field => {
+        field.addEventListener('input', () => validateField(field));
+        field.addEventListener('blur', () => validateField(field));
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from iamosahan.com/wrapbootstrap-pillarix/nonprofitx/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 May 2025 09:20:23 GMT -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/rayan/bg.png" type="image/png">
+    <title>Rayan Foundation | Charity & Donation </title>
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="vender/bootstrap/css/bootstrap.min.css">
+    <!-- Icofont Css -->
+    <link rel="stylesheet" href="vender/icofont/icofont.min.css">
+    <!-- AOS Css -->
+    <link rel="stylesheet" href="vender/aos/dist/aos.css">
+    <!-- Remix Icons -->
+    <link rel="stylesheet" href="vender/remixicon/remixicon.css">
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Common Css -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+
+<body>
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+        <div class="page-loading-inner">
+            <div class="page-spinner"></div>
+            <span>Loading...</span>
+        </div>
+    </div>
+    <div class="bg-about">
+        <nav
+            class="navbar osahan-main-nav navbar-expand charity-nav p-4 border-bottom border-white border-opacity-25 py-4 py-lg-0 w-100">
+            <div class="container" style="padding: 10px;">
+                <div class="position-relative d-flex align-items-center gap-2  site-brand">
+                    <img src="img/rayan/newLogo.png" alt="" style="height: 65px;">
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-none d-lg-block ms-auto">
+                        <ul class="navbar-nav ms-auto gap-3 me-4">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link py-4"> Home</a>
+                            </li>
+                            <li class="nav-item"><a href="about.html" class="nav-link py-4">About</a></li>
+                            <li class="nav-item"><a href="projects.html" class="nav-link py-4">Project</a></li>
+                            <li class="nav-item"><a href="volunteer.html" class="nav-link py-4">Volunteer</a></li>
+                            <li class="nav-item"><a href="gallery.html" class="nav-link py-4">Gallery</a></li>
+                            <li class="nav-item"><a href="contact.html" class="nav-link py-4">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 me-4 ms-1">
+                        <a href="https://www.facebook.com/rayanfoundationorg" target="_blank" class="link-light">
+                            <i class="ri-facebook-circle-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/rayan.foundation?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank" class="link-light">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/rayan-foundation/?viewAsMember=true" target="_blank"
+                            class="link-light">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                    </div>
+                    <a class="btn  rounded-0 d-none d-lg-block py-4 px-5 ms-2"
+                        style="background-color: rgb(255, 136, 0); color: #fff;"> <span
+                            class="py-1 d-inline-block text-uppercase fw-bold">Donate Now</span> </a>
+                    <a class="link-light d-lg-none ms-auto" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                        aria-controls="sidebar"><i class="ri-menu-3-line ri-lg"></i></a>
+                </div>
+            </div>
+        </nav>
+        <!-- body -->
+        <div class="py-5">
+            <div class="container py-5">
+                <div class="row justify-content-center pb-5">
+                    <div class="col-xl-7 col-lg-8 col-md-9 col-12">
+                        <div class="text-center text-white" data-aos="fade-up" data-aos-duration="1500">
+                            <h1 class="fw-bold display-1">Donate</h1>
+                            <nav class="d-flex align-items-center justify-content-center small">
+                                <ol class="breadcrumb gap-1">
+                                    <li class="breadcrumb-item"><a href="index.html"
+                                            style="color: rgb(255, 136, 0);">HOME</a>
+                                    </li>
+                                    <li><i class="ri-arrow-right-s-line"></i></li>
+                                    <li class="breadcrumb-item" aria-current="page">DONATE</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="donation-container">
+      <h2 class="section-title">Choose How You'd Like to Help</h2>
+
+      <!-- General Donation Section - Prominent Position -->
+      <section class="general-donation-section">
+        <div class="donation-card general-donation-card">
+          <div class="donation-card__header">
+            <h3 class="donation-card__title">General Donation</h3>
+          </div>
+          <div class="donation-card__body">
+            <p class="donation-card__description">
+              Support our general initiatives with any amount you choose. Every
+              contribution helps us further our mission to help children with
+              disabilities.
+            </p>
+
+            <div class="amount-options">
+              <div class="amount-option" data-amount="100">
+                <div class="amount-option__amount">₹100</div>
+              </div>
+              <div class="amount-option" data-amount="500">
+                <div class="amount-option__amount">₹500</div>
+              </div>
+              <div class="amount-option" data-amount="1000">
+                <div class="amount-option__amount">₹1000</div>
+              </div>
+              <div class="amount-option" data-amount="2000">
+                <div class="amount-option__amount">₹2000</div>
+              </div>
+            </div>
+
+            <div class="custom-amount-group">
+              <label for="general-amount" class="custom-amount-label"
+                >Or enter custom amount:</label
+              >
+              <input
+                type="number"
+                id="general-amount"
+                class="custom-amount-input"
+                placeholder="Amount in ₹"
+              />
+            </div>
+
+            <button id="general-donate-btn" class="donate-button">
+              Donate Now
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Divider -->
+      <div class="section-divider">
+        <span class="section-divider__text">Specialized Donations</span>
+      </div>
+
+      <!-- Specialized Programs Section -->
+      <section class="specialized-programs">
+        <div class="programs-grid">
+          <!-- NAP Monthly Card -->
+          <div class="donation-card nap-card">
+            <!-- <div class="nap-card__ribbon">Most Popular</div> -->
+            <div class="donation-card__header nap-card__header">
+              <h3 class="donation-card__title">Sponsor a Child (Monthly)</h3>
+            </div>
+            <div class="donation-card__body">
+              <p class="donation-card__description">
+                ₹1000 provides complete nutritional support for one child for an
+                entire month.
+              </p>
+
+              <div class="amount-options">
+                <div
+                  id="sam"
+                  class="amount-option amount-option--selected"
+                  data-amount="1000"
+                >
+                  <div class="amount-option__amount">₹1000</div>
+                  <div class="amount-option__label">1 Child / Month</div>
+                </div>
+                <div class="amount-option" data-amount="3000">
+                  <div class="amount-option__amount">₹3000</div>
+                  <div class="amount-option__label">3 Children / Month</div>
+                </div>
+              </div>
+
+              <div class="custom-amount-group">
+                <label for="nap-monthly-amount" class="custom-amount-label"
+                  >Custom monthly amount:</label
+                >
+                <input
+                  type="number"
+                  id="nap-monthly-amount"
+                  class="custom-amount-input"
+                  placeholder="Amount in ₹"
+                />
+              </div>
+
+              <button id="nap-monthly-donate-btn" class="donate-button">
+                Sponsor Monthly
+              </button>
+            </div>
+          </div>
+
+          <!-- NAP Yearly Card -->
+          <div class="donation-card nap-card">
+            <div class="donation-card__header nap-card__header">
+              <h3 class="donation-card__title">Sponsor a Child (Yearly)</h3>
+            </div>
+            <div class="donation-card__body">
+              <p class="donation-card__description">
+                ₹12000 provides complete nutritional support for one child for
+                an entire year.
+              </p>
+
+              <div class="amount-options">
+                <div class="amount-option" data-amount="12000">
+                  <div class="amount-option__amount">₹12,000</div>
+                  <div class="amount-option__label">1 Child / Year</div>
+                </div>
+                <div class="amount-option" data-amount="36000">
+                  <div class="amount-option__amount">₹36,000</div>
+                  <div class="amount-option__label">3 Children / Year</div>
+                </div>
+              </div>
+
+              <div class="custom-amount-group">
+                <label for="nap-yearly-amount" class="custom-amount-label"
+                  >Custom yearly amount:</label
+                >
+                <input
+                  type="number"
+                  id="nap-yearly-amount"
+                  class="custom-amount-input"
+                  placeholder="Amount in ₹"
+                />
+              </div>
+
+              <button id="nap-yearly-donate-btn" class="donate-button">
+                Sponsor Yearly
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="bg-volunteer py-5" style="background-color: rgb(2, 74, 119);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-8 col-12">
+          <div class="text-white" data-aos="fade-left" data-aos-duration="1000">
+            <p class="fw-bold text-uppercase text-white">Join Us in Making a Difference</p>
+            <div class="progress rounded-pill w-15" role="progressbar" aria-label="Example 1px high" aria-valuenow="100"
+              aria-valuemin="0" aria-valuemax="100" style="height: 4px;">
+              <div class="progress-bar bg-warning" style="width: 100%;"></div>
+            </div>
+            <div class="mt-4 mb-5">
+              <h1 class="fw-bold display-4 text-white pb-2">Become a Volunteer, Be the Change</h1>
+              <p class="lead text-light">
+                At Rayan Foundation, our volunteers are the heart of our mission. Whether you're passionate about
+                inclusive education, healthcare, or community empowerment, there's a place for you here. Join us
+                to uplift lives, create impact, and help build a brighter, more inclusive future.
+              </p>
+            </div>
+            <a href="volunteer.html" class="btn btn-warning btn-lg px-4">Join as a Volunteer</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+    <footer class="footer bg-dark text-white">
+      <!-- footer-top -->
+      <div class="footer-top py-5">
+        <div class="container py-4">
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="me-lg-5 pe-lg-5">
+                <h5 class="fw-bold pb-2">
+                  <span style="color: rgb(9, 168, 168)">Rayan</span>
+                  <span style="color: rgb(255, 136, 0)">Foundation</span>
+                </h5>
+                <!-- <p class="text-white-50">Rayan Foundation is committed to inclusive education and the
+                                development of people with disabilities. Our vision is to offer inclusive education,
+                                early intervention, livelihood support, and rehabilitation services for individuals with
+                                disabilities such as autism, cerebral palsy, intellectual disability, multiple
+                                disabilities, hearing and vision impairment, as well as similar physical and mental
+                                conditions.</p> -->
+                <p class="text-white-50">
+                  Organisation committed towards Inclusive Education,
+                  Rehabilitation of Persons with Disabilities and Professional
+                  Development in Disability Domain
+                </p>
+                <p class="text-white-50 m-0">
+                  We also provide palliative and mental health care services,
+                  vocational training, assisted living, rehabilitation programs,
+                  and research and innovation initiatives to promote
+                  accessibility and overall welfare.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <h5 class="fw-bold pb-2">Useful Links</h5>
+              <ul class="list-unstyled d-grid gap-2">
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Projects</a></li>
+                <li><a>Gallery</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3">
+              <h5 class="fw-bold pb-2">Follow Us</h5>
+              <ul class="list-unstyled d-grid gap-2">
+                <li>Nutrition Support</li>
+                <li>Inclusive Education</li>
+                <li>Medical Assistance</li>
+                <li>Love & Care</li>
+                <li>Accessible Resources</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer-bottom -->
+      <div class="footer-bottom bg-black pt-5 pb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div
+                class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-lg-between gap-4 gap-lg-5"
+              >
+                <!-- Address -->
+                <div class="d-flex align-items-center gap-3">
+                  <div class="border rounded-circle footer-icon">
+                    <i class="ri-map-pin-2-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <p class="fw-bold mb-0">Address:</p>
+                    <p class="small mb-0 text-white-50">
+                      Kozhikode, Kerala, India
+                    </p>
+                  </div>
+                </div>
+                <!-- Phone -->
+                <div class="d-flex align-items-center gap-3">
+                  <div class="border rounded-circle footer-icon">
+                    <i class="ri-phone-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <p class="fw-bold mb-0">Phone:</p>
+                    <a href="tel:+918893076182" class="small text-white-50"
+                      >+91 8893076182</a
+                    >
+                  </div>
+                </div>
+                <!-- Mobile -->
+                <div class="d-flex align-items-center gap-3">
+                  <div class="border rounded-circle footer-icon">
+                    <i class="ri-smartphone-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <p class="fw-bold mb-0">Mobile:</p>
+                    <a href="tel:+918123761245" class="small text-white-50"
+                      >+91 8123761245</a
+                    >
+                  </div>
+                </div>
+                <!-- Email -->
+                <div class="d-flex align-items-center gap-3">
+                  <div class="border rounded-circle footer-icon">
+                    <i class="ri-mail-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <p class="fw-bold mb-0">Email:</p>
+                    <a
+                      href="mailto:contactrayanfoundation@gmail.com"
+                      class="small text-white-50"
+                      >contactrayanfoundation@gmail.com</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer-end -->
+      <div class="footer-end py-5 bg-dark">
+        <div class="container">
+          <div class="row align-items-center justify-content-between">
+            <div class="col-auto">
+              <p class="text-center m-0 text-white-50">
+                Copyright ©
+                <a class="text-white" href="https://rayan.foundation"
+                  ><span style="color: aqua">RAYAN</span>
+                  <span style="color: orange">FOUNDATION</span></a
+                >
+                2025
+              </p>
+            </div>
+            <div class="col-auto">
+              <div class="d-flex align-items-center gap-4">
+                <a
+                  href="https://www.facebook.com/rayanfoundationorg"
+                  target="_blank"
+                  class="text-white"
+                >
+                  <i class="ri-facebook-circle-fill ri-lg"></i>
+                </a>
+                <!-- Twitter link removed (optional, or replace with a real one) -->
+                <a
+                  href="https://www.instagram.com/rayan.foundation?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  target="_blank"
+                  class="text-white"
+                >
+                  <i class="ri-instagram-fill ri-lg"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/rayan-foundation/?viewAsMember=true"
+                  target="_blank"
+                  class="text-white"
+                >
+                  <i class="ri-linkedin-fill ri-lg"></i>
+                </a>
+                <!-- YouTube link removed (optional, or replace with a real one) -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Sidebar Offcanvas -->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-backdrop="static"
+      tabindex="-1"
+      id="sidebar"
+    >
+      <div class="offcanvas-header d-flex justify-content-between">
+        <div
+          class="position-relative d-flex align-items-center gap-2 site-brand"
+        >
+          <img src="img/rayan/bg.png" alt="" style="height: 85px" />
+        </div>
+        <a data-bs-dismiss="offcanvas" aria-label="Close"
+          ><i class="ri-close-line ri-lg"></i
+        ></a>
+      </div>
+      <div class="offcanvas-body">
+        <div class="sidebar-nav">
+          <ul
+            class="navbar-nav justify-content-start align-items-start flex-grow-1"
+          >
+            <li class="nav-item">
+              <a href="index.html"  class="nav-link active py-4"> Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link py-4">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="projects.html" class="nav-link py-4">Project</a>
+            </li>
+            <li class="nav-item">
+              <a href="volunteer.html" class="nav-link py-4">Volunteer</a>
+            </li>
+            <li class="nav-item">
+              <a href="gallery.html" class="nav-link py-4">Gallery</a>
+            </li>
+
+            <li class="nav-item"><a href="contact.html" class="nav-link py-4">Contact</a></li>
+
+            <a href="donate.html" class="btn btn-warning rounded-0 p-0 d-lg-block py-4 px-5 ms-2">
+              <span class="py-1 d-inline-block text-uppercase fw-bold"
+                >Donate Now</span>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Video Modal -->
+    <div
+      class="modal fade"
+      id="videoModal"
+      tabindex="-1"
+      aria-labelledby="videoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content bg-transparent border-0 rounded-0">
+          <div class="modal-header d-flex justify-content-end border-0 py-0">
+            <a class="link-light" data-bs-dismiss="modal" aria-label="Close"
+              ><i class="ri-close-fill ri-2x"></i
+            ></a>
+          </div>
+          <div class="modal-body px-5">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.youtube.com/embed/gu-HhgJ7vfM?si=egwKhEDMVeXg3IuJ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootsrap Bundle Js -->
+    <script
+      data-cfasync="false"
+      src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="vender/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Jquery Js -->
+    <script src="vender/jquery/jquery-3.6.4.min.js"></script>
+    <!-- AOS Js -->
+    <script src="vender/aos/dist/aos.js"></script>
+    <!-- Custom Js -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
